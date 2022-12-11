@@ -31,6 +31,7 @@ android {
 version = "1.2"
 
 android {
+    defaultPublishConfig = "release"
     configurations {
         create("androidTestApi")
         create("androidTestDebugApi")
