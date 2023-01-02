@@ -12,6 +12,14 @@ plugins {
 android {
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
+        buildTypes{
+            debug {
+
+            }
+            release {
+
+            }
+        }
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -28,7 +36,7 @@ android {
     }
 }
 
-version = "1.2.4"
+version = "1.2.2"
 
 android {
     configurations {
@@ -172,7 +180,7 @@ afterEvaluate{
                 afterEvaluate {
                     groupId = "com.alifg.libraries"
                     artifactId = "kampkitshared"
-                    version = "1.2.4"
+                    version = "1.2.5"
                     // artifact("$projectDir/libs/sharedkampkit.aar"){
                     //   classifier = "sharedkampkit"
                     //   extension = "aar"
