@@ -28,7 +28,7 @@ android {
     }
 }
 
-version = "1.2"
+version = "1.2.2"
 
 android {
     configurations {
@@ -131,34 +131,34 @@ sqldelight {
     }
 }
 
-afterEvaluate{
-    publishing {
-        publications {
-            create<MavenPublication>("gpr") {
-                afterEvaluate {
-                    groupId = "com.alifg.libraries"
-                    artifactId = "kampkitshared"
-                    version = "1.1.4"
-                    // artifact("$projectDir/libs/sharedkampkit.aar"){
-                    //   classifier = "sharedkampkit"
-                    //   extension = "aar"
-                    // }
-                    if (plugins.hasPlugin("java")) {
-                        from(components["java"])
-                    } else if (plugins.hasPlugin("android-library")) {
-                        from(components["release"])
-                    }
-                }
-                repositories {
-                    maven {
-                        url = uri("https://maven.pkg.github.com/AlifGarindra/KampKitShared")
-                        credentials {
-                            username = "AlifGarindra"
-                            password = "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"
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+// afterEvaluate{
+//     publishing {
+//         publications {
+//             create<MavenPublication>("gpr") {
+//                 afterEvaluate {
+//                     groupId = "com.alifg.libraries"
+//                     artifactId = "kampkitshared"
+//                     version = "1.1.4"
+//                     // artifact("$projectDir/libs/sharedkampkit.aar"){
+//                     //   classifier = "sharedkampkit"
+//                     //   extension = "aar"
+//                     // }
+//                     if (plugins.hasPlugin("java")) {
+//                         from(components["java"])
+//                     } else if (plugins.hasPlugin("android-library")) {
+//                         from(components["release"])
+//                     }
+//                 }
+//                 repositories {
+//                     maven {
+//                         url = uri("https://maven.pkg.github.com/AlifGarindra/KampKitShared")
+//                         credentials {
+//                             username = "AlifGarindra"
+//                             password = "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"
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
