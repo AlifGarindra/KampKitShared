@@ -12,17 +12,26 @@ plugins {
 android {
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
-        buildTypes{
-            debug {
 
-            }
-            release {
-
-            }
-        }
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildTypes{
+            debug {
+                matchingFallbacks += listOf("debug")
+                isMinifyEnabled = false
+                proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            }
+            release {
+                matchingFallbacks += listOf("debug")
+                isMinifyEnabled = false
+                proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     testOptions {
         unitTests {
@@ -50,6 +59,7 @@ android {
 }
 
 kotlin {
+    jvm()
     android()
     // ios()
     // Note: iosSimulatorArm64 target requires that all dependencies have M1 support
@@ -180,7 +190,7 @@ afterEvaluate{
                 afterEvaluate {
                     groupId = "com.alifg.libraries"
                     artifactId = "kampkitshared"
-                    version = "1.2.5"
+                    version = "1.2.6"
                     // artifact("$projectDir/libs/sharedkampkit.aar"){
                     //   classifier = "sharedkampkit"
                     //   extension = "aar"
