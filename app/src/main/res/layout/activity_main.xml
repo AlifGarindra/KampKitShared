@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/scrollView"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <LinearLayout android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--isimpel app-->
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="ISimpel App"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:textSize="24sp"
+      android:textColor="@android:color/holo_orange_light"
+      android:layout_marginVertical="20dp"
+      />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Phone Number:"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <EditText
+      android:id="@+id/input_phone_number"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:inputType="number"
+      tools:ignore="LabelFor,TextFields"
+      android:importantForAutofill="no"
+      android:layout_marginVertical="10dp"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Outlet Name:"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <EditText
+      android:id="@+id/input_outlet_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:inputType="text"
+      tools:ignore="LabelFor,TextFields"
+      android:importantForAutofill="no"
+      android:layout_marginVertical="10dp"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Client Token:"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <TextView
+      android:id="@+id/text_client_token_app"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <Button
+      android:id="@+id/button_get_client_token"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="get client token"
+      android:backgroundTint="@android:color/holo_orange_light"
+      android:layout_marginVertical="10dp"/>
+
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="User Access Token:"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <TextView
+      android:id="@+id/text_user_access_token_app"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <Button
+      android:id="@+id/button_get_user_access_token"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="get user access token"
+      android:backgroundTint="@android:color/holo_orange_light"
+      android:layout_marginVertical="10dp"/>
+
+    <Button
+      android:id="@+id/button_get_user_access_token_expired"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="get user access token (expired dummy)"
+      android:backgroundTint="@android:color/holo_orange_light"
+      android:layout_marginVertical="10dp"/>
+
+    <Button
+      android:id="@+id/button_reset_session_app"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="reset session"
+      android:backgroundTint="@android:color/holo_orange_light"
+      android:layout_marginVertical="10dp"/>
+
+    <!--SDK-->
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="SDK"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:textSize="24sp"
+      android:textColor="@color/colorPrimaryDark"
+      android:layout_marginVertical="20sp"
+      />
+
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Phone Number:"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <TextView
+      android:id="@+id/text_phone_number"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <Button
+      android:id="@+id/button_set_phone_number"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="set phone number"
+      android:layout_marginVertical="10dp"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Outlet Name:"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <TextView
+      android:id="@+id/text_outlet_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <Button
+      android:id="@+id/button_set_outlet_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="set Outlet Name"
+      android:layout_marginVertical="10dp"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Client Token:"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <TextView
+      android:id="@+id/text_client_token_sdk"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <Button
+      android:id="@+id/button_set_client_token"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="set client token"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="User Access Token:"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <TextView
+      android:id="@+id/text_user_access_token_sdk"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_marginVertical="10dp"
+      />
+
+    <Button
+      android:id="@+id/button_set_user_access_token"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="set user access token"
+      android:layout_marginVertical="10dp"/>
+
+    <Button
+      android:id="@+id/button_open_activation"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="open Activation"
+      android:layout_marginVertical="10dp"/>
+
+
+    <Button
+      android:id="@+id/button_open_PPOB"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="open PPOB"
+      android:layout_marginVertical="10dp"/>
+
+    <Button
+      android:id="@+id/button_reset_session_sdk"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Reset Session"
+      android:layout_marginVertical="10dp"/>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="30dp"/>
+
+
+    <!--  <Button-->
+    <!--    android:id="@+id/button4"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:text="open PPOB"/>-->
+    <!--  <FrameLayout xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/container"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".MainActivity" />-->
+  </LinearLayout>
+</ScrollView>
+
