@@ -36,7 +36,7 @@ android {
     }
 }
 
-version = "1.2.2"
+version = "1.3.2"
 
 android {
     configurations {
@@ -181,7 +181,7 @@ afterEvaluate{
                 afterEvaluate {
                     groupId = "com.alifg.libraries"
                     artifactId = "kampkitshared"
-                    version = "1.3.1"
+                    version = "1.3.2"
                     // artifact("$projectDir/libs/sharedkampkit.aar"){
                     //   classifier = "sharedkampkit"
                     //   extension = "aar"
