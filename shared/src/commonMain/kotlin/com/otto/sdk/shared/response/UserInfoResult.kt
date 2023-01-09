@@ -5,5 +5,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class UserInfoResult(
   val meta : Meta?,
-  val account : PpobData.UserInfo?,
+  val account : PpobData.UserInfo? = null,
 )

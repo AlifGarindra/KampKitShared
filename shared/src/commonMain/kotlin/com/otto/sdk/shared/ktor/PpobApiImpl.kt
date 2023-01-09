@@ -10,12 +10,13 @@ import io.ktor.client.request.bearerAuth
 import io.ktor.client.request.get
 import io.ktor.client.request.header
 import io.ktor.client.request.headers
+import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.bodyAsText
 import io.ktor.http.HttpHeaders
 import io.ktor.http.encodedPath
 import io.ktor.http.takeFrom
-import kotlinx.datetime.LocalDate
-import kotlinx.datetime.LocalDateTime
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
 
 class PpobApiImpl(
   private val log: Logger,
@@ -33,7 +34,7 @@ class PpobApiImpl(
 
   //9bfb19b9-10e3-3168-9325-ed7073482160
 
-  override suspend fun getUserInfo(timeStamp:String,userToken:String,phoneNumber:String): UserInfoResult {
+  override suspend fun getUserInfo(timeStamp:String,userToken:String,phoneNumber:String): HttpResponse {
     return httpClient.get {
     headers{
       append(HttpHeaders.Authorization,"Bearer $userToken")
@@ -42,12 +43,12 @@ class PpobApiImpl(
       append("X-TRACE-ID","531e427d-2c99-4305-8cbb-5fcfa323d2f4")
     }
       endpoint("/isimpel/v1/accounts/$phoneNumber")
-    }.body()
+    }
   }
-}
+
 
 // override suspend fun getUserInfo(timeStamp:String,clientToken:String,phoneNumber:String): UserInfoResult {
-//   return httpClient.get {
+//  var userInfoResponse =  httpClient.get {
 //     headers{
 //       append(HttpHeaders.Authorization,"Bearer $clientToken")
 //       append(HttpHeaders.ContentType,"application/json")
@@ -55,6 +56,11 @@ class PpobApiImpl(
 //       append("X-TRACE-ID","531e427d-2c99-4305-8cbb-5fcfa323d2f4")
 //     }
 //     endpoint("/isimpel/v1/accounts/$phoneNumber")
-//   }.bodyAsText("")
+//   }.bodyAsText()
+//   var responseBody : UserInfoResult = Json {
+//     ignoreUnknownKeys = true
+//     isLenient = true
+//   }.decodeFromString(userInfoResponse)
+//   return responseBody
 // }
-// }
+}

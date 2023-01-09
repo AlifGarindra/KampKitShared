@@ -61,7 +61,7 @@ private val coreModule = module {
 
   single<HttpClient> {
     HttpClient(get()) {
-      expectSuccess = true
+      // expectSuccess = true
       install(ContentNegotiation) {
         json(Json{
           isLenient= true
